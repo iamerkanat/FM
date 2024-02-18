@@ -1,0 +1,44 @@
+body {
+    background-color: #f7e8d2;
+    font-family: 'Fira Code', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+}
+
+
+h1{
+    margin: 13px;
+}
+
+.box{
+    background-color: #5274dc;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.3);
+    transform: translateX(200%);
+    transition: transform 0.4s ease;
+}
+
+.box:nth-of-type(even){
+    transform: translateX(-200%);
+
+}
+
+.box.show{
+    transform: translateX(0);
+}
+
+.box h3{
+    font-size: 30px;
+}
