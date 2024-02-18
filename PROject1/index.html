@@ -3,13 +3,39 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Blurry Load</title>
+    <style>
+      
+    </style>
   </head>
   <body>
     <section class="bg"></section>
     <div class="loading-text">0%</div>
     <script src="script.js"></script>
-    
+    <div class="okay"></div>
+    <script>
+      const loadText = document.querySelector('.loading-text')
+      const bg = document.querySelector('.bg')
+
+      let load = 0
+
+      let int = setInverval(bluring, 30)
+
+function bluring(){
+    load++
+
+        if(load > 90){
+            clearInterval(int)
+        }
+
+    loadText.innerText = '${load}%'
+    loadText.style.opacity= scale(load, 0, 100, 1, 0)
+    bg.style.filter = 'blur(${scale(load, 0, 100, 30, 0)}px)'
+}
+
+      const scale = (num, in_min, in_max, out_min, out_max) => { return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min
+}
+    </script>
   </body>
 </html>
