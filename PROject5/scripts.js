@@ -1,7 +1,7 @@
-const mytext = document.getElementById('Mu')
+const mytext = document.getElementById('songs')
 mytext.innerText = 'SONGS'
 
-const sounds = ['King', 'Ki', 'Heart', 'interworld', 'Noch', 'Ride', 'SW']
+const sounds = ['king', 'Ki', 'Heart', 'interworld', 'Noch', 'Ride', 'SW']
 
 sounds.forEach(sound => {
     const btn = document.createElement('button');
@@ -10,9 +10,20 @@ sounds.forEach(sound => {
     btn.innerText = sound
 
     btn.addEventListener('click', () => {
+        stopSongs()
         document.getElementById(sound).play()
     })
+    
 
     document.getElementById('buttons').appendChild(btn);
-})
+}) 
+
+function stopSongs(){
+    sounds.forEach(sound => {
+        const song = document.getElementById(sound)
+
+        song.pause()
+        song.currentTime = 0;
+    })
+}
 
