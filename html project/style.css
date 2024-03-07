@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;                                                                                                                                                                                                                                                                
+}
+
+.red-square{
+    color:red;
+    width:100px;
+    height:100px;
+    background-color:red;
+
+}
+
+.black-circle{
+    border-radius:100%;
+    width:100px;
+    height:100px;
+    background-color:black;
+    margin-top:15px;
+
+}
+
+.color-box{
+    width:200px;
+    height: 100px;
+    background-color:aqua;
+}
