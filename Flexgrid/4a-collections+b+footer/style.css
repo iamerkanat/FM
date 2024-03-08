@@ -1,0 +1,216 @@
+/* colors - see style guide for docs. 
+Clearly there is more you could place in variables, up to you if you want to use them. My answer does not go beyond colors to keep the code easier to read. */
+
+:root {
+    --color1: #001219;
+    --color2: #005f73;
+    --color3: #3d9397;
+    --color4: #86d17e;
+    --color5: #e9d8a6;
+    --color6: #ffa200;
+    --color7: #ea1f18;
+    --color8: #1a28f4;
+    --color9: #c00789;
+    --color10: #14c2e5;
+}
+
+
+/* generic site styles */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ccf2d7;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+section h2 {
+    font-size: 2.5rem;
+}
+
+
+/* Initial mobile layout: a series of images stacked on top of each other with the figure caption over the image. */
+section ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+figure{
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-width: 10px;
+    border-style: solid;
+    border-radius: 5px;
+}
+
+figure img{
+    margin-bottom: -4px;
+    width: 100%;
+    object-fit: cover;
+    object-position: 0 -150px;
+}
+
+figcaption{
+    background-color: rgba(255, 255, 255, 0.8);
+    font-size: 1.875rem;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+figcaption a{
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--color1);
+}
+
+.color2, .color2 a:hover{
+    border-color: var(--color2);
+    color: var(--color2);
+}
+
+.color3, .color3 a:hover{
+    border-color: var(--color3);
+    color: var(--color3);
+}
+.color4, .color4 a:hover{
+    border-color: var(--color4);
+    color: var(--color4);
+}
+.color6, .color6 a:hover{
+    border-color: var(--color6);
+    color: var(--color6);
+}
+.color7, .color7 a:hover{
+    border-color: var(--color7);
+    color: var(--color7);
+}
+.color8, .color8 a:hover{
+    border-color: var(--color8);
+    color: var(--color8);
+}
+.color9, .color9 a:hover{
+    border-color: var(--color9);
+    color: var(--color9);
+}
+
+.color10, .color10 a:hover{
+    border-color: var(--color10);
+    color: var(--color10);
+}
+
+/*4b*/
+.mission{
+    margin-bottom: 3rem;
+}
+
+.missionText{
+    display: block;
+    line-height: 1.7;
+}
+
+.logo1{
+    max-height: 100px;
+    display: block;
+    margin-right: 4rem;
+    position: relative;
+}
+
+/* At this breakpoint, transition to 2 figures per line */
+@media (min-width:200px){
+    figure img{
+        object-fit: cover;
+        object-position: 0;
+    }
+}
+@media (min-width: 550px) {
+
+    section ul{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    section li{
+        flex-basis: 49.5%;
+    }
+
+    /*turning off object position to see whole img, inherit object-fit: cover*/
+    figure img{
+        object-position: 0;
+    }
+
+    /*4b*/
+    .missionText{
+        display: flow-root; 
+        max-width: 900px;
+        justify-content: space-between;
+    }
+
+    .logo1{
+        float: left;
+        shape-outside: polygon(35.84% 94.87%, 34.64% 87.05%, 51.64% 4.06%, 55.1% 2.38%);/*WOW!!! This is for displaying text as stairs*/
+        max-height: 212px;
+        
+    }
+   
+}
+
+
+/* At this breakpoint, transition to 3 figures per line */
+
+@media (min-width: 800px) {
+    section h2{
+        margin-left: 100px;
+    }
+    section li{
+        flex-basis: 32.5%;
+    }
+    figure img{
+        object-position: 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    section h2{
+        text-align: center;
+    }
+    section li{
+        flex-basis: 24%;
+        gap: 2%;
+    }
+    figure img{
+        max-height: 363px;
+        object-position: 0;
+    }
+    .color9 img{
+        height: 363px;
+    
+    }
+}
+
+
+
+
