@@ -139,6 +139,40 @@ figcaption a{
     position: relative;
 }
 
+/*footer*/
+.footer{
+    background-color: var(--color5);
+}
+footer{
+    padding: 3rem;
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer h3{
+    margin-top: 0;
+}
+
+footer ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+footer li{
+    margin-right: 1rem;
+}
+
+footer address{
+    font-style: normal;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
 /* At this breakpoint, transition to 2 figures per line */
 @media (min-width:200px){
     figure img{
@@ -171,9 +205,13 @@ figcaption a{
 
     .logo1{
         float: left;
-        shape-outside: polygon(35.84% 94.87%, 34.64% 87.05%, 51.64% 4.06%, 55.1% 2.38%);/*WOW!!! This is for displaying text as stairs*/
+        shape-outside: polygon(57.63% 99.18%, 41.72% 99.97%, 77.53% 3.58%, 93.51% 1.42%);;/*WOW!!! This is for displaying text as stairs*/
         max-height: 212px;
         
+    }
+
+    footer address{
+        margin-top: 0;
     }
    
 }
@@ -190,6 +228,13 @@ figcaption a{
     }
     figure img{
         object-position: 0;
+    }
+
+    address{
+        flex-basis: 65.5%;
+    }
+    section li, .social{
+        flex-basis: 32.5%;
     }
 }
 
