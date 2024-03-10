@@ -1,0 +1,85 @@
+html {
+    box-sizing: border-box;
+}
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+}
+  /* set font family and background gradient */
+body {
+    padding: 0;
+    border: 0;
+    font-family: Arial, sans-serif;
+}
+img {
+    width: 100%;
+}
+
+/*Mobile dimension of website!!!*/
+
+#artists h4{
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 0.8rem;
+    /*if two margins meet they just collapse together*/
+    margin: 0;
+}
+
+#artists h3{
+    margin-top: 0.3rem;
+}
+
+.articlewrap{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+}
+
+.articlewrap article{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    gap: 0 1rem;
+}
+.articlewrap article *{
+    grid-column: 2/3;
+    margin-top: 0;
+}
+
+.articlewrap article img{
+    grid-column: 1/2;
+    grid-row: 1/6;
+}
+
+@media(min-width: 650px){
+    .articlewrap{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(10px, 1fr)); /*minmax is good when it is shrinking*/
+    }
+}
+
+@media(min-width: 1000px){
+    .articlewrap{
+        grid-template-columns: repeat(4, minmax(10px, 1fr));
+    }
+    .articlewrap article{
+        grid-template-columns: minmax(100px, 1fr);
+        grid-template-rows: repeat(5, auto);
+        gap: 0 1em;
+    }
+    .articlewrap article *{
+        grid-column: 1/2;
+    }
+    .articlewrap article img{
+        grid-column: 1/2;
+        grid-row: auto;
+        margin-bottom: 1rem;
+        border-radius: 15px;
+    }
+}
+
+
+
+
+
