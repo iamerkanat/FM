@@ -1,0 +1,63 @@
+Why CSS Grid?
+
+# 2Dimensions
+* specification
+# No 'row' markup (parent&children)
+# "Use Flexbox and Grid where they make the most sense"
+
+# Browsers support CSS Grid (level 1) 
+# Firefox supports Subgrid (level 2)
+
+<parent> //Grid container
+    <child //Grid item>
+    <child class="col-2"
+    <child class="col-3"
+    <child class="col-4"
+</parent>
+
+parent{
+    display: grid;
+    gap: 10px; /*hor&ver*/
+}
+
+//grid-column.png 
+Start and end shorthand for 1D:
+
+.col-1{
+    grid-column: 1/2;
+}
+
+.col-2{
+    grid-column: 2/3;
+}
+
+.col-3{
+    grid-column: 3/4;
+}
+
+.col-4{
+    grid-column: 4/5;
+}
+
+
+for 2D grid shorthand: 
+
+.col-1{
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.col-2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.col-3{
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+https://css-tricks.com/snippets/css/complete-guide-grid/
+https://cssgridgarden.com
+
+
