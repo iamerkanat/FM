@@ -1,0 +1,51 @@
+responsive images: 
+
+* content choices "art direction"
+* format: GIF, JPG, PNG, SVG and others
+* pixel density
+* image display dimensions
+* what image exactly to use???
+# Image Optimization by Addy Osmani
+
+
+May 2010 ResImages were defined
+
+2010-14 disaster
+
+2014-15 Standards defined
+
+2016 <picture> supported
+
+2017 srcset and sizes supported
+
+
+Prime Directive!!! Only one image should load
+
+Use cautiously, you should not take all the images and make them all responsive ishhhh.
+
+css of that times: 
+
+img{
+    width: 100%;
+    max-width: 800px;
+}
+
+better crop than minimazing, it is ART Direction:
+<picture>
+    <source src="ballons.jpg" media="(min-width:850px)">
+
+    <img src="ballons-cropped.jpg" alt="Over desert">
+</picture>
+
+
+<img src="small.jpg"
+
+    srcset="large.jpg 1024w,
+            medium.jpg 640w,
+            small.jpg 320w"
+
+    sizes="(min-width: 36em) 33.3vw, 100vw"
+
+    alt="something cropped" />
+
+    <source media="(aspect-ratio: 16/9)"
